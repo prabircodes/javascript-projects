@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Muli:wght@100;300;400;500;700;900&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Muli", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  width: 90vw;
+}
+.frame1 {
+  background-image: url("./images/exploretheworld.jpg");
+}
+.frame2 {
+  background-image: url("./images/Splendid-Lake.jpg");
+}
+.frame3 {
+  background-image: url("./images/WildFortest.jpg");
+}
+.frame4 {
+  background-image: url("./images/SunnyBeach.jpg");
+}
+.frame5 {
+  background-image: url("./images/City-of-Winter.jpg");
+}
+
+.pannel {
+  background-size: auto 100%;
+  background-position: centre;
+  background-repeat: no-repeat;
+  height: 80vh;
+  border-radius: 50px;
+  color: #fff;
+  cursor: pointer;
+  flex: 0.5;
+  margin: 10px;
+  position: relative;
+  transition: flex 0.7s ease-in;
+}
+
+.pannel h3 {
+  font-size: 24px;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  margin: 0;
+  opacity: 0;
+}
+.pannel.active {
+  flex: 5;
+}
+.pannel.active h3 {
+  opacity: 1;
+  transition: opacity 0.3s ease-in;
+}
+
+@media (max-width: 480px) {
+  .contaoner {
+    width: 100vw;
+  }
+
+  .pannel:nth-of-type(4),
+  .pannel:nth-of-type(5) {
+    display: none;
+  }
+}
